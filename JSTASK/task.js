@@ -14,3 +14,48 @@ Result:
 
 Compare email addresses, first names, last names and phone numbers.
 */
+//TASK 1
+console.log("------------TASK 1-------------")
+const data1 = require('./users1.json');
+const users1 = data1.users
+
+
+for (let i= 0; i < users1.length; i++) {
+    if (!isNaN(users1[i].phoneNumber)) {
+        console.log("true")
+        
+    }
+    else{
+        console.log("Phone Nr of User with Id: " + users1[i].userId+" is Invalid.")
+    }
+    
+}
+console.log("------------TASK 2-------------")
+// TASK 2
+
+const data2 = require('./users2.js');
+const users2 = data2.users
+for (let j = 0; j < users1.length; j++) {
+    if (users1[j].firstName !== users2[j].firstName) {
+        console.log('Names of user with Id:' + users1[j].userId +" are not the same")
+        console.log("First name is: " + "\'"+users1[j].firstName +'\''+", but second name is: " +"\'"+ users2[j].firstName+"\'")
+        console.log("--------")
+    }
+    if (users1[j].lastName !== users2[j].lastName) {
+        console.log('Surnames of user with Id:' + users1[j].userId +" are not the same")
+        console.log("First surname is: " + "\'"+users1[j].lastName +'\''+", but second surname is: " +"\'"+ users2[j].lastName+"\'")
+        console.log("--------")
+    }
+    if (users1[j].phoneNumber !== users2[j].phoneNumber) {
+        console.log('Phone numbers of user with Id:' + users1[j].userId +" are not the same")
+        console.log("First phone is: " + "\'"+users1[j].firstName +'\''+", but second phone is: " +"\'"+ users2[j].phoneNumber+"\'")
+        console.log("--------")
+    }
+    if (users1[j].emailAddress !== users2[j].emailAddress) {
+        console.log('Emails of user with Id:' + users1[j].userId +" are not the same")
+        console.log("First email is: " + "\'"+users1[j].emailAddress +'\''+", but second email is: " +"\'"+ users2[j].emailAddress+"\'")
+        console.log("--------")
+    }
+
+    
+}
